@@ -11,8 +11,8 @@ function NavBar() {
           <Navbar.Brand href="#bio">Navbar</Navbar.Brand>
           <Nav className="me-auto text-center">
             <Nav.Link href="#bio">Home</Nav.Link>
-            <Nav.Link href="#myshtuff">Features</Nav.Link>
-            <Nav.Link href="#contact">Pricing</Nav.Link>
+            <Nav.Link href="#myshtuff">My Shtuff</Nav.Link>
+            <Nav.Link href="#contact">Contact Me</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
