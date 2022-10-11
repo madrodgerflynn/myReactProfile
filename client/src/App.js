@@ -3,7 +3,7 @@ import Bio from "./componenets/Bio";
 import Contact from "./componenets/Contact";
 import MyShtuff from "./componenets/MyShtuff";
 import Footer from "./componenets/Footer";
-import Email from "./componenets/Email";
+
 import "./App.css";
 import { useState } from "react";
 
