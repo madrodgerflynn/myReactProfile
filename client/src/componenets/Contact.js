@@ -1,25 +1,43 @@
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Email from "./Email";
 
 function Contact() {
+  const values = [true, "sm-down", "md-down", "lg-down", "xl-down", "xxl-down"];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
   return (
-    <Modal.Dialog>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal title</Modal.Title>
-      </Modal.Header>
-
-      <Modal.Body>
-        <p>
-          GitHub:
-          <link href="https://github.com/madrodgerflynn">@madrodgerflynn</link>
-        </p>
-      </Modal.Body>
-
-      <Modal.Footer>
-        <Button variant="primary">Close</Button>
-      </Modal.Footer>
-    </Modal.Dialog>
+    <>
+      {values.map((v, idx) => (
+        <Button key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
+          Contact Info
+          {typeof v === "string" && `below ${v.split("-")[0]}`}
+        </Button>
+      ))}
+      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Let's Connect!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            GitHub:
+            <a href="https://github.com/madrodgerflynn">@madrodgerflynn</a>
+          </p>
+          <p>
+            Email:
+            <Email />
+          </p>
+        </Modal.Body>
+      </Modal>
+    </>
   );
 }
 
-export default Contact;
+render(<Contact />);
