@@ -40,6 +40,6 @@ function Contact() {
   );
 }
 
-render(<Contact />);
+// render(<Contact />);
 
 export default Contact;

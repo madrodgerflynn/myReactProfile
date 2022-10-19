@@ -10,8 +10,8 @@ function Email({ email, subject, body, ...props }) {
 }
 
 ReactDOM.render(
-  <Mailto email="madrodgerflynn@gmail.com" subject="Hey There" body="Hello">
+  <Email email="madrodgerflynn@gmail.com" subject="Hey There" body="Hello">
     Shoot Me an Email
-  </Mailto>
+  </Email>
 );
 export default Email;

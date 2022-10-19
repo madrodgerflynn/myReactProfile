@@ -51,4 +51,6 @@ function MyShtuff() {
   );
 }
 
-render(<MyShtuff />);
+// render(<MyShtuff />);
+
+export default MyShtuff;
