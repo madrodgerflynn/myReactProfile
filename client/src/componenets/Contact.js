@@ -41,3 +41,5 @@ function Contact() {
 }
 
 render(<Contact />);
+
+export default Contact;
